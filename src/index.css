@@ -1,0 +1,93 @@
+html,
+body {
+	background: rgb(245, 245, 245);
+	height: 100%;
+	width: 100%;
+	line-height: 0;
+	margin: 0;
+}
+
+#Game {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+#Game > div {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#Surface {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background: black;
+}
+
+.snake, .food {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	background-color: red;
+	z-index: 20;
+}
+
+.snake:nth-child(odd) {
+	background-color: red;
+}
+
+.snake:first-child {
+	background-color: red
+}
+
+.food {
+	z-index: 19;
+	background-color: #ffd700;
+}
+
+.score {
+	color: black;
+	line-height: 2;
+	font-size: 30px;
+	font-family: monospace;
+}
+
+.highScore {
+	float: right;
+}
+
+.gameOver .highScore {
+	display: block;
+	text-align: center;
+	float: none;
+	margin: 10px 0;
+}
+
+.restartButton {
+    background-color: red;
+    color: #FFF;
+    padding: 10px 20px;
+    box-shadow: none;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 14px;
+    outline: 0;
+}
+
+.restartButton:active {
+    border-bottom: 0;
+    border-top: 3px solid transparent;
+}
